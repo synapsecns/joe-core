@@ -27,6 +27,7 @@
   ],
   "scripts": {
     "build": "hardhat compile",
+    "build-go": "sol-merger \"./contracts/*.sol\" ./build --export-plugin SPDXLicenseRemovePlugin",
     "console": "hardhat console",
     "testnet:deploy": "yarn ropsten:deploy && yarn rinkeby:deploy && yarn goerli:deploy && yarn kovan:deploy && yarn moonbase:deploy && yarn arbitrum:deploy",
     "mainnet:deploy": "hardhat --network mainnet deploy",
@@ -89,6 +90,7 @@
     "husky": "^7.0.2",
     "prettier": "^2.3.1",
     "prettier-plugin-solidity": "^1.0.0-beta.13",
+    "sol-merger": "^3.1.0",
     "solhint": "^3.3.6",
     "solhint-plugin-prettier": "^0.0.5",
     "solidity-coverage": "^0.7.13",
